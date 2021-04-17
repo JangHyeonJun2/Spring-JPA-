@@ -45,7 +45,7 @@ public class JpaMain {
             em.close();
         }
 
-////        **데이터 수정**
+        ////        **데이터 수정**
 //        try {
 //            Member findMember = em.find(Member.class, 1L);
 //            System.out.println("========수정 전========");

@@ -2,16 +2,19 @@ package hellojpa;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-@TableGenerator(
-        name = "MEMBER_SEQ_GENERATOR",
-        table = "MY_SEQUENCES",
-        initialValue = 1,allocationSize = 50)
+//@TableGenerator(
+//        name = "MEMBER_SEQ_GENERATOR",
+//        table = "MY_SEQUENCES",
+//        initialValue = 1,allocationSize = 50)
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "MEMBER_SEQ_GENERATOR")
+//    @GeneratedValue(strategy = GenerationType.TABLE, generator = "MEMBER_SEQ_GENERATOR")
+    @GeneratedValue
     @Column(name = "MEMBER_ID")
     private Long id;
 
@@ -22,6 +25,9 @@ public class Member {
     @OneToOne
     @JoinColumn(name = "LOCKER_ID")
     private Locker locker;
+
+    @OneToMany(mappedBy = "member")
+    private List<MemberProduct> memberProducts = new ArrayList<>();
 
     @Column(name = "name")
     private String username;
@@ -39,9 +45,6 @@ public class Member {
 
     @Lob
     private String description;
-
-
-
 }
 
 
