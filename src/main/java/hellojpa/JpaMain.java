@@ -16,9 +16,28 @@ public class JpaMain {
 
 //        **데이터 등록**
         try{
-            Member member = new Member();
-            member.setUsername("HelloC");
-            em.persist(member);
+
+            Team team = new Team();
+            team.setName("TeamA");
+            em.persist(team);
+
+            Person person = new Person();
+            person.setName("person1");
+            person.changeTeam(team);
+            em.persist(person);
+
+            em.flush();
+            em.clear();
+
+            Team findTeam = em.find(Team.class, team.getId());
+
+            List<Person> persons = findTeam.getPersons();
+
+            for (Person person1 : persons) {
+                System.out.println("person1.getName() = " + person1.getName());
+            }
+
+
             tx.commit();
         }catch (Exception e) {
             tx.rollback();

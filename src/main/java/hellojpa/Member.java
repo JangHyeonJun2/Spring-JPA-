@@ -1,41 +1,39 @@
 package hellojpa;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
 @TableGenerator(
         name = "MEMBER_SEQ_GENERATOR",
         table = "MY_SEQUENCES",
-        pkColumnValue = "MEMBER_SEQ", allocationSize = 1)
+        initialValue = 1,allocationSize = 50)
 public class Member {
     @Id
-        @GeneratedValue(strategy = GenerationType.TABLE,
-                generator = "MEMBER_SEQ_GENERATOR")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "MEMBER_SEQ_GENERATOR")
+    @Column(name = "MEMBER_ID")
+    private Long id;
 
     @Column(name = "name")
     private String username;
 
+    private Integer age;
 
-    public Member() {
-    }
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
 
-    public String getId() {
-        return id;
-    }
+    @Temporal(TemporalType.TIMESTAMP) //예전 속성 지금은 그냥 LocalDate or LocalDateTime으로 맞추면 된다.
+    private Date createdDate;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
 
-    public String getUsername() {
-        return username;
-    }
+    @Lob
+    private String description;
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+
+
 }
 
 
