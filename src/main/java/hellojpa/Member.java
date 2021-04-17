@@ -15,6 +15,14 @@ public class Member {
     @Column(name = "MEMBER_ID")
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
+
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
+
     @Column(name = "name")
     private String username;
 
