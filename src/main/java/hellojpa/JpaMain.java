@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class JpaMain {
@@ -14,36 +15,64 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
 
-//        **데이터 등록**
-        try{
+        try {
+            Movie movie = new Movie();
+            movie.setActor("장현준");
+            movie.setDirector("LeeJiHong");
+            movie.setName("취업하자");
+            movie.setPrice(10000);
+            movie.setCreateBy("jang");
+            movie.setCreateAt(LocalDateTime.now());
+            em.persist(movie);
 
-            Team team = new Team();
-            team.setName("TeamA");
-            em.persist(team);
-
-            Person person = new Person();
-            person.setName("person1");
-            person.changeTeam(team);
-            em.persist(person);
+            Album album = new Album();
+            album.setArtist("칸타타");
+            album.setName("커피와함께");
+            album.setPrice(20000);
+            em.persist(album);
 
             em.flush();
             em.clear();
 
-            Team findTeam = em.find(Team.class, team.getId());
-
-            List<Person> persons = findTeam.getPersons();
-
-            for (Person person1 : persons) {
-                System.out.println("person1.getName() = " + person1.getName());
-            }
-
-
+            Movie findMoive = em.find(Movie.class, movie.getId());
+            System.out.println("findMoive = " + findMoive);
             tx.commit();
         }catch (Exception e) {
             tx.rollback();
         }finally {
             em.close();
         }
+
+//        **데이터 등록**
+//        try{
+//
+//            Team team = new Team();
+//            team.setName("TeamA");
+//            em.persist(team);
+//
+//            Person person = new Person();
+//            person.setName("person1");
+//            person.changeTeam(team);
+//            em.persist(person);
+//
+//            em.flush();
+//            em.clear();
+//
+//            Team findTeam = em.find(Team.class, team.getId());
+//
+//            List<Person> persons = findTeam.getPersons();
+//
+//            for (Person person1 : persons) {
+//                System.out.println("person1.getName() = " + person1.getName());
+//            }
+//
+//
+//            tx.commit();
+//        }catch (Exception e) {
+//            tx.rollback();
+//        }finally {
+//            em.close();
+//        }
 
         ////        **데이터 수정**
 //        try {
