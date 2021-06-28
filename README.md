@@ -5,3 +5,4 @@
 - [3주차(엔티티 맵핑)](https://jj-yi.tistory.com/7?category=936567)
 - [4주차(영속성 컨텍스트)](https://jj-yi.tistory.com/8?category=936567)
 - [5주차(다양한 연관관계 매핑)](https://jj-yi.tistory.com/25?category=936567)
+- [6주차(상속관계 맵핑)](https://jj-yi.tistory.com/38?category=936567)
