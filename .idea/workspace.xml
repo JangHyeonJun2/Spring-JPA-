@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="895fbd64-9cc0-4d89-ab82-83ec75c4a6a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/DeliverStatuse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/Delivery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/OrderItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/OrderStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpashop/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Address.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -207,17 +199,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.JpaMain" />
@@ -257,7 +238,12 @@
       <workItem from="1620805639508" duration="463000" />
       <workItem from="1622689964956" duration="2980000" />
       <workItem from="1622694911177" duration="26000" />
-      <workItem from="1623922729780" duration="5416000" />
+      <workItem from="1623922729780" duration="5749000" />
+      <workItem from="1624010865115" duration="5143000" />
+      <workItem from="1624860151471" duration="4749000" />
+      <workItem from="1624873226234" duration="77000" />
+      <workItem from="1624940161732" duration="4088000" />
+      <workItem from="1625490203598" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="양방향 연관관계와 연관관계의 주인1,2 및 실전 예제2">
       <created>1618626441731</created>
@@ -280,7 +266,42 @@
       <option name="project" value="LOCAL" />
       <updated>1618655148480</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="상속관계 맵핑 및 실전예제 프로젝트 따로 빼기">
+      <created>1623935647372</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623935647372</updated>
+    </task>
+    <task id="LOCAL-00005" summary="프록시와 연관관계 관리 (1)">
+      <created>1624026149552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624026149552</updated>
+    </task>
+    <task id="LOCAL-00006" summary="지연로딩과 즉시로딩">
+      <created>1624869068557</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624869068558</updated>
+    </task>
+    <task id="LOCAL-00007" summary="영속성 전이(CASCADE)와 고아객체">
+      <created>1624872574205</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624872574205</updated>
+    </task>
+    <task id="LOCAL-00008" summary="임베디드 타입 및 값 타입과 불변 객체">
+      <created>1624947673190</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624947673190</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -362,7 +383,12 @@
     <MESSAGE value="양방향 연관관계와 연관관계의 주인1,2 및 실전 예제2" />
     <MESSAGE value="일대일 연관관계" />
     <MESSAGE value="다양한 연관관계 매핑 실전예제 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="다양한 연관관계 매핑 실전예제 3" />
+    <MESSAGE value="상속관계 맵핑 및 실전예제 프로젝트 따로 빼기" />
+    <MESSAGE value="프록시와 연관관계 관리 (1)" />
+    <MESSAGE value="지연로딩과 즉시로딩" />
+    <MESSAGE value="영속성 전이(CASCADE)와 고아객체" />
+    <MESSAGE value="임베디드 타입 및 값 타입과 불변 객체" />
+    <option name="LAST_COMMIT_MESSAGE" value="임베디드 타입 및 값 타입과 불변 객체" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.tld" />
