@@ -3,9 +3,7 @@ package hellojpa;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 //@TableGenerator(
@@ -22,6 +20,14 @@ public class Member {
     @Column(name = "USERNAME")
     private String username;
 
+    @ElementCollection
+    @CollectionTable(name = "FAVORITE_FOOD", joinColumns = @JoinColumn(name = "MEMBER_ID"))
+    @Column(name = "FOOD_NAME")
+    private Set<String> favoiteFoods = new HashSet<>();
+
+    @ElementCollection
+    @CollectionTable(name = "ADDRESS" , joinColumns = @JoinColumn(name = "MEMBER_ID"))
+    private List<Address> addressHistory = new ArrayList<>();
     //기간
     @Embedded
     private Period period;
@@ -101,6 +107,22 @@ public class Member {
 
     public void setMemberProducts(List<MemberProduct> memberProducts) {
         this.memberProducts = memberProducts;
+    }
+
+    public Set<String> getFavoiteFoods() {
+        return favoiteFoods;
+    }
+
+    public void setFavoiteFoods(Set<String> favoiteFoods) {
+        this.favoiteFoods = favoiteFoods;
+    }
+
+    public List<Address> getAddressHistory() {
+        return addressHistory;
+    }
+
+    public void setAddressHistory(List<Address> addressHistory) {
+        this.addressHistory = addressHistory;
     }
 }
 
